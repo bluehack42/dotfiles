@@ -1,0 +1,4 @@
+{{ if ne .chezmoi.os "linux" }}
+ mousePadoff.fish
+ mousePadon.fish
+{{ end }}
