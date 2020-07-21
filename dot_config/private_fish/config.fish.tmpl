@@ -1,0 +1,61 @@
+{{ if eq .chezmoi.os "darwin" -}}
+# ~/.config/fish/config.fish
+# direnv
+set -x LC_ALL en_US.UTF-8
+eval (direnv hook fish)
+
+#set -x GOROOT "/usr/local/go/bin/go"
+
+set -x EDITOR "nvim"
+set -x KUBE_EDITOR "nvim"
+
+#set -x GOPATH $HOME/golang
+#set -x GOROOT /usr/local/go/bin
+#set PATH $GOPATH/bin $GOROOT/bin $PATH
+
+set normal (set_color normal)
+set magenta (set_color magenta)
+set yellow (set_color yellow)
+set green (set_color green)
+set red (set_color red)
+set gray (set_color -o black)
+
+# Fish git prompt
+set __fish_git_prompt_showdirtystate 'yes'
+set __fish_git_prompt_showstashstate 'yes'
+set __fish_git_prompt_showuntrackedfiles 'yes'
+set __fish_git_prompt_showupstream 'yes'
+set __fish_git_prompt_color_branch yellow
+set __fish_git_prompt_color_upstream_ahead green
+set __fish_git_prompt_color_upstream_behind red
+
+# Status Chars
+set __fish_git_prompt_char_dirtystate '⚡'
+set __fish_git_prompt_char_stagedstate '→'
+set __fish_git_prompt_char_untrackedfiles '☡'
+set __fish_git_prompt_char_stashstate '↩'
+set __fish_git_prompt_char_upstream_ahead '+'
+set __fish_git_prompt_char_upstream_behind '-'
+
+function fish_prompt
+  set last_status $status
+
+  set_color $fish_color_cwd
+  #printf '%s' (prompt_pwd)
+  set_color normal
+
+  printf '%s' (__fish_git_prompt)
+
+  set_color normal
+  echo -s (set_color blue)(__kube_prompt) (set_color $fish_color_cwd)" "(prompt_pwd) (set_color normal) "> "
+end
+
+alias k="kubectl"
+alias vi="vim"
+
+abbr -a -g k kubectl
+
+alias vim="nvim"
+
+set PATH $PATH ~/go/bin
+{{ end -}}
