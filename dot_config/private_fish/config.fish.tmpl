@@ -3,16 +3,10 @@
 set -x LC_ALL en_US.UTF-8
 eval (direnv hook fish)
 
-#set -x GOROOT "/usr/local/go/bin/go"
-
 set -x EDITOR "nvim"
 set -x KUBE_EDITOR "nvim"
 
 {{ if eq .chezmoi.os "darwin" -}}
-#set -x GOPATH $HOME/golang
-#set -x GOROOT /usr/local/go/bin
-#set PATH $GOPATH/bin $GOROOT/bin $PATH
-
 set normal (set_color normal)
 set magenta (set_color magenta)
 set yellow (set_color yellow)
@@ -58,4 +52,11 @@ abbr -a -g k kubectl
 alias vim="nvim"
 
 set PATH $PATH ~/go/bin
+
+{{ else if eq .chezmoi.os "linux" -}}
+if status is-login
+  if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+    exec startx
+   end
+end
 {{ end -}}
