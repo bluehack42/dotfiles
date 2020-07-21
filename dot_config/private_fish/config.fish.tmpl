@@ -1,4 +1,3 @@
-{{ if eq .chezmoi.os "darwin" -}}
 # ~/.config/fish/config.fish
 # direnv
 set -x LC_ALL en_US.UTF-8
@@ -9,6 +8,7 @@ eval (direnv hook fish)
 set -x EDITOR "nvim"
 set -x KUBE_EDITOR "nvim"
 
+{{ if eq .chezmoi.os "darwin" -}}
 #set -x GOPATH $HOME/golang
 #set -x GOROOT /usr/local/go/bin
 #set PATH $GOPATH/bin $GOROOT/bin $PATH
