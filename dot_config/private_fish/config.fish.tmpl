@@ -5,6 +5,7 @@ eval (direnv hook fish)
 
 set -x EDITOR "nvim"
 set -x KUBE_EDITOR "nvim"
+alias vim="nvim"
 
 {{ if eq .chezmoi.os "darwin" -}}
 set normal (set_color normal)
@@ -45,11 +46,9 @@ function fish_prompt
 end
 
 alias k="kubectl"
-alias vi="vim"
+alias vi="nvim"
 
 abbr -a -g k kubectl
-
-alias vim="nvim"
 
 set PATH $PATH ~/go/bin
 
