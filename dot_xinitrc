@@ -1,0 +1,6 @@
+
+xrdb ~/.Xresources
+
+urxvtd -q -f -o
+
+exec i3
