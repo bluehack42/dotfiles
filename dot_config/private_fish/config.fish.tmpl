@@ -3,8 +3,9 @@ set -x EDITOR "nvim"
 set -x KUBE_EDITOR "nvim"
 alias vim="nvim"
 
+set -x LC_ALL en_GB.UTF-8
+
 {{ if eq .chezmoi.os "darwin" -}}
-set -x LC_ALL en_US.UTF-8
 # for direnv
 eval (direnv hook fish)
 
@@ -53,6 +54,9 @@ abbr -a -g k kubectl
 set PATH $PATH ~/go/bin
 
 {{ else if eq .chezmoi.os "linux" -}}
+
+alias xclip="xclip -selection clipboard"
+
 if status is-login
   if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
     exec startx
