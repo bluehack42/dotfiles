@@ -62,9 +62,9 @@ URxvt*color15 : #EEEEEC
 ! hostname midna, see https://manpages.debian.org/stretch/x11-xserver-utils/xrdb.1
 #ifdef SRVR_midna
 ! https://michael.stapelberg.de/posts/2017-12-11-dell-up3218k/
-Xft.dpi: 288
+Xft.dpi: 141
 #else
-Xft.dpi: 192
+Xft.dpi: 141
 #endif
 
 Xft.autohint: 0
