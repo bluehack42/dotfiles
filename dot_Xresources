@@ -3,7 +3,7 @@ Emacs*menuBar: 0
 Emacs*verticalScrollBars: off
 
 !*font: -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-URxvt.font: xft:Bitstream Vera Sans Mono:size=8
+URxvt.font: xft:Bitstream Vera Sans Mono:size=10
 URxvt.letterSpace: -1
 
 URxvt.jumpScroll: true
@@ -62,9 +62,9 @@ URxvt*color15 : #EEEEEC
 ! hostname midna, see https://manpages.debian.org/stretch/x11-xserver-utils/xrdb.1
 #ifdef SRVR_midna
 ! https://michael.stapelberg.de/posts/2017-12-11-dell-up3218k/
-Xft.dpi: 141
+Xft.dpi: 100
 #else
-Xft.dpi: 141
+Xft.dpi: 100
 #endif
 
 Xft.autohint: 0
