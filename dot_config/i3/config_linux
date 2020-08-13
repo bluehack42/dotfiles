@@ -180,3 +180,12 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# lock screen
+exec --no-startup-id xautolock -time 5 -locker i3lock 
+
+# applets
+exec --no-startup-id /usr/bin/blueman-applet # bluetooth
+exec --no-startup-id /usr/bin/pasystray # audio control
+
+exec --no-startup-id /usr/bin/qlipper # clipboard manager
