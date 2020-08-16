@@ -6,6 +6,7 @@ Plug 'davidhalter/jedi-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dense-analysis/ale'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 set number
@@ -27,6 +28,8 @@ set listchars=eol:┐
 highlight ColorColumn ctermbg=3
 
 :imap § <Esc>
+
+nmap <C-n> :NERDTreeToggle<CR>
 
 "
 """"""""
