@@ -185,7 +185,8 @@ bar {
 }
 
 # lock screen
-exec --no-startup-id xautolock -time 5 -locker i3lock 
+exec --no-startup-id xautolock -time 5 -locker "i3lock -c 1c1c1c"
+ 
 
 # applets
 exec --no-startup-id /usr/bin/blueman-applet # bluetooth
