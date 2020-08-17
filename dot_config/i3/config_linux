@@ -43,6 +43,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec urxvtc
 
+# start a terminal as root
+bindsym $mod+Shift+Return exec urxvtc -e sudo su - 
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
