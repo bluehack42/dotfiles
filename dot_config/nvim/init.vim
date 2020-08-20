@@ -7,6 +7,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
+Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 set number
@@ -17,7 +19,7 @@ set smartcase
 set noexpandtab           " Insert spaces when TAB is pressed.
 "set tabstop=2           " Render TABs using this many spaces.
 set shiftwidth=2
-set listchars=eol:┐
+set list listchars=eol:┐
 " set expandtab                   " Convert tabs into spaces
 " set list
 " " set listchars=tab:>\ ,trail:·,extends:\#,nbsp:.
@@ -57,3 +59,7 @@ nnoremap <F2> :call ColorColumnToggle()<CR>
 " needed, and have indentation at 8 chars to be sure that all indents are tabs
 " (despite the mappings later):
 autocmd FileType make set noexpandtab shiftwidth=2 softtabstop=0
+
+let g:deoplete#enable_at_startup = 1
+
+autocmd VimEnter * nested :TagbarOpen 
