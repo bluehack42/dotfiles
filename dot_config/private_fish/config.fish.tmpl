@@ -4,6 +4,7 @@ set -x KUBE_EDITOR "nvim"
 alias vim="nvim"
 
 set -x LC_ALL en_GB.UTF-8
+set -x GPG_TTY (tty)
 
 {{ if eq .chezmoi.os "darwin" -}}
 # for direnv
