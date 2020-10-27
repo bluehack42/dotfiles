@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim'
@@ -19,7 +19,7 @@ set smartcase
 set noexpandtab           " Insert spaces when TAB is pressed.
 "set tabstop=2           " Render TABs using this many spaces.
 set shiftwidth=2
-set list listchars=eol:┐
+set list listchars=tab:\│\ ,trail:·,eol:¬,nbsp:_
 " set expandtab                   " Convert tabs into spaces
 " set list
 " " set listchars=tab:>\ ,trail:·,extends:\#,nbsp:.

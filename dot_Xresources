@@ -3,7 +3,11 @@ Emacs*menuBar: 0
 Emacs*verticalScrollBars: off
 
 !*font: -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-URxvt.font: xft:Bitstream Vera Sans Mono:size=10
+! URxvt.font: xft:Bitstream Vera Sans Mono:size=10
+!URxvt.font: xft:FantasqueSansMono\ Nerd\ Font\ Mono:size=12
+URxvt*font: xft:DejaVu Sans Mono:size=10
+
+
 URxvt.letterSpace: -1
 
 URxvt.jumpScroll: true
@@ -16,15 +20,20 @@ URxvt.internalBorder: 1
 URxvt.cursorBlink: 0
 URxvt.visualBell: off
 URxvt.keysym.Mod1-u: perl:mark-yank-urls:activate_mark_mode
-URxvt.keysym.Mod4-p: perl:fonts:plus
-URxvt.keysym.Mod4-m: perl:fonts:minus
 URxvt.keysym.Mod4-o: perl:cwd-spawn
 URxvt.keysym.Mod4-s: perl:searchable-scrollback:start
 URxvt.underlineURLs: false
-URxvt.perl-ext: selection,mark-yank-urls,cwd-spawn,selection-to-clipboard
+URxvt.perl-ext: default,matcher,selection,selection-to-clipboard
 URxvt.urlLauncher: google-chrome
 URxvt.urgentOnBell: true
 URxvt.scrollstyle: next
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-S-Up:   font-size:incglobal
+URxvt.keysym.C-S-Down: font-size:decglobal
+URxvt.keysym.C-equal:  font-size:reset
+URxvt.keysym.C-slash:  font-size:show
+
 !URxvt.color4: #496AA0
 !URxvt.color12: #11AAFF
 
