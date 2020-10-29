@@ -9,6 +9,7 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 Plug 'majutsushi/tagbar'
+Plug 'fatih/vim-go'
 call plug#end()
 
 set number
@@ -63,3 +64,6 @@ autocmd FileType make set noexpandtab shiftwidth=2 softtabstop=0
 let g:deoplete#enable_at_startup = 1
 
 autocmd VimEnter * nested :TagbarOpen 
+
+let g:go_fmt_command = "goimports"
+
